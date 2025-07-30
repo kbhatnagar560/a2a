@@ -36,7 +36,7 @@ class VerizonPlanAgent:
                     
                     # Get plan name
                     try:
-                        h3 = card.locator('h3[class~="vui:text"]')
+                        h3 = card.locator('h3')
                         name = await h3.inner_text()
                         print(f"Debug: Retrieved inner text is: '{name}'")
                         name = " ".join(name.split()).strip() if name else "Unknown Plan"
